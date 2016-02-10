@@ -1,0 +1,73 @@
+*
+ Theme Name:   2012 Child
+ Description:  2012 Child Theme
+ Author:       Steven Stern
+ Author URI:   http://www.sterndata.com
+ Template:     twentytwelve
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  2012-child
+*/
+
+body,
+button,
+input,
+select,
+textarea,
+html {
+    font-family: 'Raleway','Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+.site-title,
+.site-description {
+    font-family: 'Bitter', serif;
+}
+ul, ol {
+    margin-left: 2em;
+}
+blockquote {
+    font-size: 1.75rem;
+    margin-left: 1.25em;
+}
+.site-footer .widget {
+    margin-bottom: 0;
+}
+#colophon {
+    margin-bottom: 1em;
+}
+.entry-content img {
+   box-shadow: 0 0 15px #ccc;
+}
+.wp-caption-text {
+   font-style: italic;
+   font-size: 80%;
+   text-align:center;
+}
+.jetpack-video-wrapper .twitter-tweet-rendered{
+   width: 100% !important;
+}
+
+h1.site-title, h2.site-description {
+   text-align:center;
+}
+ul.slides {
+   margin:0;
+}
+.flex-control-nav.flex-control-paging {
+   bottom: -20px;
+}
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+#carousel.flexslider {
+  margin-top: -40px;
+}
