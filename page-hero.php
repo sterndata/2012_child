@@ -40,9 +40,16 @@ if ( function_exists( 'wp_get_attachment_image_srcset' ) ) $use_srcset=true;
 
 			<div id="carousel" class="flexslider">
 	        <ul class="slides">
-	            <?php foreach( $images as $image ) { ?>
+	            <?php foreach( $images as $image ) { 
+                       if ( $use_srcset ) {
+                         $src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
+                        }
+                       else {
+                        $src_set = '';
+                       }
+?>
 	            <li>
-                <img src="<?php echo $image['url']; ?>" />
+                <img src="<?php echo $image['url'],'" ',$src_set; ?>" />
 	            </li>
 
 	 <?php } // foreach ?>
