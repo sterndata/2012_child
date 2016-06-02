@@ -3,7 +3,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'jetpack', get_stylesheet_directory_uri() . '/my-jetpack-carousel.css','jetpack' );
-    if ( is_page_template( 'page-hero.php' ) ) {
+    if ( is_page_template( 'slider-page.php' ) ) {
        wp_enqueue_style( 'flexslider-css', get_stylesheet_directory_uri() . '/flexslider/flexslider.css' );
        }
 
@@ -32,10 +32,10 @@ if( function_exists('acf_add_options_page') ) {
                      );
 }
 
-// if using the page-hero template, enqueue flexsider
+// if using the slider-page template, enqueue flexsider
 
 function wagw_flexslider_gallery_scripts() {
-   if ( is_page_template( 'page-hero.php' ) ) {
+   if ( is_page_template( 'slider-page.php' ) ) {
       wp_enqueue_script( 'jquery' );
       wp_register_script('flexslider', get_stylesheet_directory_uri() . '/flexslider/jquery.flexslider-min.js', array( 'jquery' ), false, false);
       wp_register_script( 'load_flex', get_stylesheet_directory_uri() . '/js/load-flex.js', array ( 'jquery', 'flexslider' ), false, false);
