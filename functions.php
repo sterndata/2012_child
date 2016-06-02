@@ -68,3 +68,4 @@ function wagw_flexslider_gallery_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wagw_flexslider_gallery_scripts');
 
+/////
