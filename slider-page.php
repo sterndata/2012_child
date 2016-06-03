@@ -11,7 +11,7 @@ get_header(); ?>
 
 <?php ///
 
-if ( have_rows( 'slides') ) {
+if ( have_rows( 'slides' ) ) {
 	$use_srcset = false;
 	if ( function_exists( 'wp_get_attachment_image_srcset' ) ) { $use_srcset = true; }
 
@@ -26,13 +26,16 @@ if ( have_rows( 'slides') ) {
 				$slide_title = get_sub_field( 'slide_title' );
 				$slide_caption = get_sub_field( 'slide_caption' );
 				$slide_target = get_sub_field( 'slide_target' );
+				if ( $slide_target ) {
+					$href = '<a href="' . $slide_target . '">';
+				}
 				if ( $use_srcset ) {
 					$src_set = ' srcset ="' . wp_get_attachment_image_srcset( $image['id'] ) . '" ';
 				} else {
 					$src_set = '';
 				}
 ?>
-		 <li> <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> />
+		 <li><?php if ( $slide_target ) { echo $href; } ?><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" <?php echo $src_set; ?> /><?php if ( $slide_target ) { echo '</a>'; } ?>
 				<?php if ( get_field( 'show_image_captions' ) ) { ?>
 					<div class="flex-caption">
 				<?php if ( $slide_title ) { ?> <span class="caption_title"><?php echo $slide_title; }?>
@@ -50,7 +53,7 @@ if ( have_rows( 'slides') ) {
 		</div>
 		<?php if ( get_field( 'slider_carousel' ) ) { ?>
 			<div id="carousel" class="flexslider">
-      	<ul class="slides">
+				<ul class="slides">
 					<?php echo $carousel; ?>
 	      </ul>
 			</div>
