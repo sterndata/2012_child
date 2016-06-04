@@ -17,7 +17,7 @@ if ( have_rows( 'slides' ) ) {
 
 	/// ?>
 
-	<div id="slider" class="flexslider">
+	<div id="slider" class="flexslider slider-save-space">
 		<ul class="slides">
 			<?php
 			$carousel = ''; // in case there's a carousel
