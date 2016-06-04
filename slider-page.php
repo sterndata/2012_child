@@ -20,7 +20,7 @@ if ( have_rows( 'slides' ) ) {
 	<div id="slider" class="flexslider">
 		<ul class="slides">
 			<?php
-			$carousel = '<div id="carousel" class="flexslider"><ul class="slides">'; // in case there's a carousel
+			$carousel = ''; // in case there's a carousel
 			while ( have_rows( 'slides' ) ) { the_row();
 				$image = get_sub_field( 'slide_image' );
 				$slide_title = get_sub_field( 'slide_title' );
