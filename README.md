@@ -7,3 +7,5 @@ Many props to Marc Wensauer (https://github.com/daslicht) who helped me understa
 The hero slider page uses the template "slider-page.php". If you'd like to implement it, import the export from ACF in the acf directory. You'll also need flexslider and the "load-flex" js from the js directory. Be sure to look at functions.php to see how flexslider css and the appropriate js is loaded.  
 
 Demo of the slider at http://devbase.sterndata.com/hero-slider-test/
+
+Note:  Be sure to get latest version of flexslider before putting into production.
