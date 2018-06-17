@@ -23,7 +23,7 @@
 </footer><!-- .site-footer -->
 
 </div><!-- .site -->
-
+<p>Powered by <a href="https://wordpress.org">WordPress</a> version <?php echo get_bloginfo( 'version' );?>
 <?php wp_footer(); ?>
 
 </body>
